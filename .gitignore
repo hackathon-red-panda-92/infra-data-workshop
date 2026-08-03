@@ -3,6 +3,12 @@
 Thumbs.db
 .vscode/
 
+# Guides are markdown in this repo; local Word exports stay out of it
+guides/*.docx
+
+# Facilitator-only material - never published
+guides/FACILITATOR-GUIDE.md
+
 # Python
 __pycache__/
 *.pyc

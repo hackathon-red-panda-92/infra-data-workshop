@@ -35,8 +35,8 @@ The rhythm is **Prompt -> Suggestion -> Run -> Refine -> Sanity-check**.
 |-- SETUP.md
 |-- CODESPACES.md
 |-- guides/
-|   |-- Attendee Guide - 10 min talk 50 min handson.docx
-|   `-- Facilitator Guide - 10 min talk 50 min handson.docx
+|   |-- README.md
+|   `-- ATTENDEE-GUIDE.md
 |-- magic-moment/
 |   `-- server.log
 `-- labs/

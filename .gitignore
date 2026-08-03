@@ -15,10 +15,9 @@ output/
 combined*.csv
 report*.txt
 report*.md
-
-# Systems-engineer lab: generated params & keys (may contain your IP / SSH key)
-main.parameters.json
-*.bicepparam
-*.pem
-id_rsa*
-contoso_sandbox*
+clean_sales.py
+analysis.md
+data-quality-report.md
+handoff/
+sales-handoff.zip
+monthly-revenue.png

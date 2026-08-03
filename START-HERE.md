@@ -1,30 +1,27 @@
 # Start here
 
-You can complete this workshop in either of these ways. Pick **one** before
-opening a lab; both paths use the same files, prompts, Azure subscription, and
-facilitator support.
+The facilitator and attendees complete one shared lab together. Choose one setup
+path, then wait for the facilitator before starting the exercise. No Azure
+subscription is required.
 
 ## Option A - GitHub Codespaces
 
-Choose this path if you want a browser-based workspace with nothing to install.
-The workshop tools are provisioned automatically: Copilot CLI, Azure CLI, Bicep,
-and Python. You work with Copilot in the terminal; sidebar Chat is disabled.
+Choose this path for a browser-based workspace with nothing to install. Copilot
+CLI and Python are provisioned automatically.
 
-Continue with [Codespaces setup](SETUP.md#option-a---github-codespaces-nothing-to-install).
+Continue with [Codespaces setup](CODESPACES.md).
 
 ## Option B - GitHub Copilot app for Windows
 
-Choose this path if you prefer a desktop application and an Interactive session.
-Install the [GitHub Copilot app for Windows (x64)](https://gh.io/copilot-app-win64),
-then install Git and Azure CLI. Data-track attendees also install Python.
+Choose this path for a desktop Interactive session. Install the
+[GitHub Copilot app](https://gh.io/copilot-app-win64), Git, and Python.
 
-Continue with [Windows app setup](SETUP.md#option-b---github-copilot-app-for-windows).
+Continue with [app setup](SETUP.md#option-b---github-copilot-app-for-windows).
 
-## Then choose a lab
+## Open the shared lab
 
-- [Systems Engineer lab](labs/systems-engineer/LAB.md)
-- [Data Engineer lab](labs/data-engineer/LAB.md)
+Everyone uses [the same local data lab](labs/data-engineer/LAB.md). The
+facilitator reads each prompt aloud and performs it while attendees enter the
+same prompt. Do not move ahead of the group.
 
-Your facilitator provides Copilot access and an Azure subscription invitation.
-Accept the invitation before starting. Do not paste subscription IDs, secrets, or
-keys into Copilot.
+Do not paste secrets, customer data, or confidential information into Copilot.

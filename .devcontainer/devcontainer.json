@@ -1,23 +1,14 @@
 {
   "name": "GitHub Copilot for Non-Coders Workshop",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
-  "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {
-      "version": "latest",
-      "installBicep": true
-    }
-  },
   "customizations": {
     "vscode": {
       "settings": {
         "github.copilot.chat.enabled": false,
         "chat.disableAIFeatures": true,
         "terminal.integrated.defaultProfile.linux": "bash"
-      },
-      "extensions": [
-        "ms-azuretools.vscode-bicep"
-      ]
+      }
     }
   },
-  "onCreateCommand": "sudo ln -sf /usr/bin/python3 /usr/local/bin/python && sudo npm install --global @github/copilot && copilot --version && az version && az bicep version && python --version"
+  "onCreateCommand": "sudo ln -sf /usr/bin/python3 /usr/local/bin/python && sudo npm install --global @github/copilot && copilot --version && python --version"
 }

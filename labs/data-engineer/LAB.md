@@ -1,134 +1,108 @@
-# Data Engineer lab — clean data and ship it by *talking* to Copilot
+# Shared follow-along lab - clean, analyse, and package data locally
 
-**This lab is about one skill: describing what you want to GitHub Copilot and
-letting it do the work.** You won't write code or memorise commands. You'll have a
-conversation — Copilot writes the cleanup, runs it, answers your questions with
-SQL, and uploads the result to Azure, while **you** check the numbers and stay in
-charge.
+The facilitator and every attendee complete these steps together. Wait for the
+facilitator before moving to the next step. You do not need coding experience or
+an Azure subscription.
 
-**Time:** about 45 minutes. **You need no coding experience.**
+**Time:** 50 minutes
 
-> ### 👉 First time? Do the setup first.
-> If you haven't installed the tools (including **Python**), got the files, and
-> signed into Azure yet, open **[`SETUP.md`](../../SETUP.md)** (in the top folder)
-> and do those steps. Come back when `az account show` printed your subscription.
+## The loop
 
-> **The rhythm you'll repeat — "the loop":**
-> **Prompt** (say what you want) → **Suggestion** (Copilot writes/does it) →
-> **Run** (it runs, you approve) → **Refine** (ask for one change) →
-> **Sanity-check** (confirm the numbers). You go round until it's right.
+For every step:
 
----
+1. **Prompt:** enter the facilitator's quoted prompt in Copilot.
+2. **Suggestion:** read what Copilot proposes.
+3. **Run:** approve only the actions you understand.
+4. **Refine:** ask for one change at a time.
+5. **Sanity-check:** verify the files and numbers.
 
-## Where you work: talking to Copilot
+All work stays in this folder. The original CSV files must remain unchanged.
 
-Everything below happens where you completed **[`SETUP.md`](../../SETUP.md)**:
-the Copilot terminal in a **Codespace**, or an **Interactive** session in the
-GitHub Copilot app.
+## Before the timer starts
 
-The magic today is that Copilot doesn't only *write* code, it *runs* it — cleans
-your files, runs queries, uploads to Azure. Each time it wants to run something it
-**shows you and waits for your approval** (a **Continue** / **Allow** button).
-**Read it, then approve.** That's you staying in control.
+1. Open this repository in GitHub Codespaces or the GitHub Copilot app.
+2. Open `labs/data-engineer` as your working folder.
+3. Start Copilot and confirm it can see `sales_january.csv`,
+   `sales_february.csv`, and `product_prices.csv`.
+4. Do not create files yet. Wait for the facilitator.
 
-> Throughout this lab, a line in quotes like *"Do X"* means: **type it into
-> Copilot and press Enter**, then approve what it proposes. You almost never type
-> commands yourself.
+## 1. Inspect the source files (minutes 0-7)
 
----
+Enter this prompt exactly as the facilitator does:
 
-## What you'll build
+> Read the three CSV files in this folder. Do not change anything yet. In plain
+> English, list the inconsistencies that must be fixed before the sales files can
+> be combined, including column names, date formats, money values, spaces, and
+> capitalisation. Then propose a short plan.
 
-Three messy spreadsheets → one clean table → answers to real questions → the clean
-file uploaded to Azure — then deleted. The starter files are already in this
-folder: `sales_january.csv`, `sales_february.csv`, `product_prices.csv`.
+Compare Copilot's list with the facilitator's. Ask about any difference before
+continuing.
 
----
+## 2. Clean and combine the data (minutes 7-17)
 
-## Step 1 — Ask Copilot what's wrong with the data
+> Create a Python script named `clean_sales.py` that combines the January and
+> February sales files, fixes every issue in the plan, joins the product list,
+> and writes a new file named `sales_clean.csv`. Never modify the three source
+> CSV files. Explain the script in five bullets, then run it.
 
-Copilot can already see all the workshop files. In Copilot, ask:
+Read the explanation and approve the file creation and run. Open
+`sales_clean.csv` and confirm that it contains rows from both months.
 
-> *"Look at the 3 CSV files in this folder. In plain English, list everything
-> that's messy or inconsistent — different column names, date formats, dollar
-> signs, commas in numbers, capitalisation, extra spaces — that I'd need to fix
-> before combining them."*
+If the action fails, use the same recovery prompt as the facilitator:
 
-Read the list. That's your to-do list — and Copilot will do it for you.
+> Explain the error in plain English. Make only the smallest necessary fix, then
+> run the script again.
 
-## Step 2 — Ask Copilot to clean and combine the data
+## 3. Answer business questions (minutes 17-27)
 
-> *"Write a Python program that fixes every issue you just listed, combines
-> January and February into one tidy table, and saves it as a new file
-> `sales_clean.csv`. Do not change my original files. Then run it, and tell me in
-> five simple bullets what it did."*
+> Using `sales_clean.csv`, calculate total revenue by region and by month, the
+> top-selling product by revenue, and the five largest discounts from list
+> price. Run the analysis and save the results as `analysis.md` with clear tables.
 
-Copilot writes the program **and** runs it (approve when it asks). A new
-`sales_clean.csv` appears. Click it to look.
+Do not accept an answer that only describes code. Copilot must run the analysis
+and write the actual results.
 
-> **Something goes red?** Just say: *"That errored — explain it simply and fix
-> it."* Copilot sorts it out and runs it again.
+## 4. Validate the result (minutes 27-37)
 
-## Step 3 — Ask questions with plain English (Copilot writes the SQL)
+> Validate the cleaned data. Report the source row count, cleaned row count,
+> date range, total units, total revenue, duplicate count, missing-value count,
+> and three sample rows. Recalculate totals independently from the cleaned CSV.
+> Save the evidence as `data-quality-report.md`. Flag any mismatch instead of
+> hiding or guessing it.
 
-You don't need to know SQL — describe the question:
+Compare the row counts and totals with the facilitator. If yours differ, stop
+and ask Copilot to identify the first differing row or assumption.
 
-> *"Using `sales_clean.csv`, show me total revenue by region and total revenue by
-> month. Run it and show me the answers as a neat table."*
+## 5. Improve the handoff (minutes 37-44)
 
-Read the answers. Ask follow-ups the same way: *"Now show me the top-selling
-product."*
+> Review `analysis.md` and `data-quality-report.md` for a non-technical manager.
+> Add a short executive summary to `analysis.md` with three findings and one
+> limitation. Use only facts calculated from the files; do not invent figures.
 
-## Step 4 — Refine: add the price comparison
+Read the summary. Ask Copilot which file and calculation supports each claim.
 
-> *"Now also use `product_prices.csv` to compare the actual price per unit against
-> the list price, and show me the five biggest discounts."*
+## 6. Create and inspect the local package (minutes 44-50)
 
-## Step 5 — Sanity-check (make sure you can trust it)
+> Create a local folder named `handoff` containing copies of `sales_clean.csv`,
+> `analysis.md`, and `data-quality-report.md`. Add a `README.md` that explains
+> what each file contains and how to rerun `clean_sales.py`. Create
+> `sales-handoff.zip` from that folder. Do not upload or send anything.
 
-> *"Show me the number of rows, the range of dates, three example rows, and the
-> total revenue before and after cleaning, so I can be sure nothing was lost or
-> double-counted."*
+Open the `handoff` folder and confirm it contains exactly four files. The ZIP is
+the finished local deliverable; there is no cloud upload or teardown.
 
-Do the before/after totals make sense? If something looks off, say exactly what
-and ask Copilot to fix it.
+## Safety rules
 
-## Step 6 — Ask Copilot to ship it to Azure (approve as it goes)
+- Read every proposed action before approving it.
+- Keep the three source CSV files unchanged.
+- Use only the fictitious workshop data. Never paste secrets or real customer
+  information into Copilot.
+- Require evidence for totals and claims. Copilot drafts; you decide.
+- Keep all outputs local during the workshop.
 
-> *"Create a resource group with a **unique name** (add a random number so it
-> doesn't clash with other people) in the **Sweden Central** region, then create a
-> **private** storage account in it and upload my `sales_clean.csv` into a
-> container. Use the storage account key so I don't need extra permissions. Tell
-> me the resource group name you chose, and confirm the storage is private."*
+## If the group finishes early
 
-Copilot proposes each command — **read and approve**. **Note the resource group
-name** it tells you (you'll want it at teardown).
+Use one prompt together:
 
-*(Want to see the uploaded file yourself? Just ask: "Show me the files now in
-that storage container." Copilot lists them for you — no commands to type.)*
-
-## Step 7 — Ask Copilot to tear it all down (do NOT skip) 🧹
-
-> *"Delete the resource group you created so nothing keeps costing money, and
-> confirm when it's gone."*
-
-Approve it. To be sure, ask: *"Confirm the resource group is really gone."* When
-Copilot tells you it no longer exists, you're done. 🎉 You cleaned real data and
-shipped it to the cloud — all by describing what you wanted.
-
----
-
-## If you finish early (keep the conversation going)
-
-- *"Which sales rep sold the most in each region? Run it."*
-- *"Check that every revenue value became a proper number, and show me any rows
-  that didn't."*
-- *"Make a bar chart of revenue by month, save it as an image, and open it."*
-
-## The rules that keep you safe
-
-- **You approve every action.** Copilot proposes; you read it and click Continue.
-- **Work on copies** — your original CSVs are never changed.
-- **Read before you run** — ask for the five-bullet summary first.
-- **Never paste** real secrets, keys, or your subscription ID into the chat.
-- **Always tear down** at the end (Step 7).
+> Create a bar chart of monthly revenue as `monthly-revenue.png`, add it to the
+> handoff folder, update the handoff README, and rebuild the ZIP.

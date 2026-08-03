@@ -4,7 +4,7 @@ Use GitHub Copilot to inspect sample server inventory and service exports,
 generate a repeatable health check, prioritise remediation, and create a local
 handoff package. No Azure subscription or remote server access is required.
 
-Start with [`LAB.md`](LAB.md) and follow it top to bottom for about 50 minutes.
+Start with [`LAB.md`](LAB.md) and stop at its 25-minute final checkpoint.
 
 ## Source files
 

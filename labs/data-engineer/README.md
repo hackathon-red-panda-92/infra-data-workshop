@@ -1,8 +1,8 @@
 # Shared follow-along lab - clean, analyse, and package data locally
 
 The facilitator and attendees use the same prompts in [`LAB.md`](LAB.md). The
-exercise takes about 50 minutes and requires Python, GitHub Copilot, and no Azure
-subscription.
+exercise lasts no more than 25 minutes and requires Python, GitHub Copilot, and
+no Azure subscription.
 
 ## Source files
 

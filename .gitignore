@@ -21,6 +21,8 @@ data-quality-report.md
 handoff/
 sales-handoff.zip
 monthly-revenue.png
+data-handoff/
+data-handoff.zip
 audit_servers.py
 server-health.csv
 remediation-plan.md

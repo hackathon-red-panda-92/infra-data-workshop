@@ -1,0 +1,11 @@
+hostname,operating_system,role,environment,owner,last_successful_patch,disk_free_percent,backup_status,endpoint_protection,maintenance_window
+CT-WEB-01,Windows Server 2022,Web,Production,Adele Vance,2026-07-20,38,Success,Healthy,Saturday 22:00
+CT-WEB-02,Windows Server 2022,Web,Production,Adele Vance,2026-06-12,11,Warning,Healthy,Saturday 22:00
+CT-API-01,Ubuntu 22.04,API,Production,Alex Wilber,2026-07-18,24,Success,Healthy,Sunday 01:00
+CT-API-02,Ubuntu 22.04,API,Production,Alex Wilber,2026-05-29,8,Failed,Degraded,Sunday 01:00
+CT-DB-01,Windows Server 2022,Database,Production,Megan Bowen,2026-07-10,17,Success,Healthy,Sunday 03:00
+CT-DB-02,Windows Server 2019,Database,Recovery,Megan Bowen,2026-06-25,9,Success,Unknown,Sunday 03:00
+CT-FILE-01,Windows Server 2019,File,Production,Diego Siciliani,2026-07-22,42,Success,Healthy,Friday 23:00
+CT-JUMP-01,Windows Server 2022,Administration,Production,Diego Siciliani,2026-06-01,13,Failed,Degraded,Saturday 20:00
+CT-DEV-01,Ubuntu 22.04,Build,Development,Alex Wilber,2026-07-25,55,NotConfigured,Healthy,Wednesday 18:00
+CT-MON-01,Ubuntu 22.04,Monitoring,Production,Adele Vance,2026-07-16,21,Success,Healthy,Thursday 21:00

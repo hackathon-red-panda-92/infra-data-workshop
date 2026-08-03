@@ -1,0 +1,11 @@
+hostname,service_name,status,startup_type,last_checked
+CT-WEB-01,W3SVC,Running,Automatic,2026-08-01T08:00:00Z
+CT-WEB-02,W3SVC,Stopped,Automatic,2026-08-01T08:00:00Z
+CT-API-01,contoso-api,Running,Automatic,2026-08-01T08:02:00Z
+CT-API-02,contoso-api,Stopped,Manual,2026-08-01T08:02:00Z
+CT-DB-01,MSSQLSERVER,Running,Automatic,2026-08-01T08:04:00Z
+CT-DB-02,MSSQLSERVER,Running,Manual,2026-08-01T08:04:00Z
+CT-FILE-01,LanmanServer,Running,Automatic,2026-08-01T08:06:00Z
+CT-JUMP-01,TermService,Running,Automatic,2026-08-01T08:06:00Z
+CT-DEV-01,build-agent,Running,Automatic,2026-08-01T08:08:00Z
+CT-MON-01,monitor-agent,Stopped,Automatic,2026-08-01T08:08:00Z

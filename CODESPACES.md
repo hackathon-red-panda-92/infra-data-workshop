@@ -30,6 +30,10 @@ Trust the workshop folder when asked. If prompted, enter `/login` and complete
 GitHub sign-in. Copilot asks before it writes files or runs commands. Read each
 proposal and approve only appropriate actions.
 
-Open [`labs/data-engineer/LAB.md`](labs/data-engineer/LAB.md). Wait for the
-facilitator, then enter each quoted prompt together. All outputs remain in the
-Codespace.
+Open the track selected by the facilitator:
+
+- [`labs/systems-engineer/LAB.md`](labs/systems-engineer/LAB.md)
+- [`labs/data-engineer/LAB.md`](labs/data-engineer/LAB.md)
+
+Wait for the facilitator, then enter each quoted prompt together. All outputs
+remain in the Codespace.

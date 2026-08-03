@@ -1,0 +1,13 @@
+The generated audit script failed locally with this message:
+
+Traceback (most recent call last):
+  File "audit_servers.py", line 41, in <module>
+    patch_date = row["last_patch_date"]
+KeyError: 'last_patch_date'
+
+The inventory header is:
+
+hostname,operating_system,role,environment,owner,last_successful_patch,disk_free_percent,backup_status,endpoint_protection,maintenance_window
+
+Use this evidence to explain the cause and make the smallest correction. Do not
+rename source columns or rewrite the whole script.

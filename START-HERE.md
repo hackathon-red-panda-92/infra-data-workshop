@@ -1,7 +1,8 @@
 # Start here
 
-The facilitator and attendees complete one shared lab together. Choose one setup
-path, then wait for the facilitator before starting the exercise. No Azure
+The workshop has separate Systems Administrator and Data Engineer tracks. The
+facilitator selects one track for the delivery and attendees follow that same
+track together. Choose one setup path, then wait for the facilitator. No Azure
 subscription is required.
 
 ## Option A - GitHub Codespaces
@@ -18,10 +19,12 @@ Choose this path for a desktop Interactive session. Install the
 
 Continue with [app setup](SETUP.md#option-b---github-copilot-app-for-windows).
 
-## Open the shared lab
+## Open the selected track
 
-Everyone uses [the same local data lab](labs/data-engineer/LAB.md). The
-facilitator reads each prompt aloud and performs it while attendees enter the
-same prompt. Do not move ahead of the group.
+- [Systems Administrator lab](labs/systems-engineer/LAB.md)
+- [Data Engineer lab](labs/data-engineer/LAB.md)
+
+The facilitator reads each prompt aloud and performs it while attendees enter
+the same prompt. Do not move ahead of the group or switch tracks during the lab.
 
 Do not paste secrets, customer data, or confidential information into Copilot.

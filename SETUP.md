@@ -1,7 +1,7 @@
 # Setup - start here
 
-You do not need coding experience or Azure access. The facilitator and attendees
-perform one shared exercise together.
+You do not need coding experience or Azure access. The facilitator selects the
+Systems Administrator or Data Engineer track, and attendees follow it together.
 
 ## What you need
 
@@ -16,8 +16,9 @@ perform one shared exercise together.
 3. Select **Code > Codespaces > Create codespace on main**.
 4. Open **Terminal > New Terminal** and run `copilot`.
 5. Trust the folder and complete `/login` if prompted.
-6. Open [`labs/data-engineer/LAB.md`](labs/data-engineer/LAB.md) and wait for the
-   facilitator.
+6. Open the track selected by the facilitator and wait before starting:
+   [`labs/systems-engineer/LAB.md`](labs/systems-engineer/LAB.md) or
+   [`labs/data-engineer/LAB.md`](labs/data-engineer/LAB.md).
 
 See [`CODESPACES.md`](CODESPACES.md) for troubleshooting.
 
@@ -35,7 +36,7 @@ See [`CODESPACES.md`](CODESPACES.md) for troubleshooting.
    ```
 
 4. Start an **Interactive** session for the project.
-5. Ask Copilot to show `labs/data-engineer/LAB.md`, then wait for the facilitator.
+5. Ask Copilot to show the selected track's `LAB.md`, then wait for the facilitator.
 
 ## During the lab
 

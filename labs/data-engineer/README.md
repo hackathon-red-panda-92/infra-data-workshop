@@ -17,8 +17,8 @@ no Azure subscription.
 - `sales_clean.csv`
 - `analysis.md`
 - `data-quality-report.md`
-- `handoff/`
-- `sales-handoff.zip`
+- `data-handoff/`
+- `data-handoff.zip`
 
 Generated outputs are ignored by Git. The three source CSVs must remain
 unchanged.

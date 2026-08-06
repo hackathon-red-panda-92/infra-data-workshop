@@ -24,8 +24,6 @@ report*.md
 clean_sales.py
 analysis.md
 data-quality-report.md
-handoff/
-sales-handoff.zip
 monthly-revenue.png
 data-handoff/
 data-handoff.zip

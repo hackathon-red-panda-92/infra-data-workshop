@@ -44,7 +44,8 @@ The rhythm is **Prompt -> Suggestion -> Run -> Refine -> Sanity-check**.
     |   |-- LAB.md
     |   |-- server-inventory.csv
     |   |-- service-status.csv
-    |   `-- operations-brief.md
+    |   |-- operations-brief.md
+    |   `-- sample-error.txt
     `-- data-engineer/
         |-- LAB.md
         |-- sales_january.csv

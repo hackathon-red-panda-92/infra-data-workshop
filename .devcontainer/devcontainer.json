@@ -3,6 +3,9 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22-bookworm",
   "customizations": {
     "vscode": {
+      "extensions": [
+        "ReprEng.csv"
+      ],
       "settings": {
         "github.copilot.chat.enabled": false,
         "chat.disableAIFeatures": true,
